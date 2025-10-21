@@ -7,11 +7,10 @@ import AddToFavoritesIcon from '../components/cardIcons/addToFavorites';
 
 
 const HomePage = (props) => {
-
   const { data, error, isPending, isError } = useQuery({
     queryKey: ['discover'],
     queryFn: getMovies,
-  })
+  });
 
   if (isPending) {
     return <Spinner />
